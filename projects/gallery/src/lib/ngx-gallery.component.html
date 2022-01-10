@@ -49,6 +49,7 @@
                        [rotate]="currentOptions?.previewRotate" [rotateLeftIcon]="currentOptions?.rotateLeftIcon"
                        [rotateRightIcon]="currentOptions?.rotateRightIcon" [download]="currentOptions?.previewDownload"
                        [downloadIcon]="currentOptions?.downloadIcon" [bullets]="currentOptions?.previewBullets"
+                       [scrollNavigation]="currentOptions?.previewScrollNavigation"
                        (previewClose)="onPreviewClose()" (previewOpen)="onPreviewOpen()"
                        (activeChange)="previewSelect($event)"
                        [class.ngx-gallery-active]="previewEnabled"></ngx-gallery-preview>
