@@ -73,6 +73,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   @Input() download: boolean;
   @Input() downloadIcon: string;
   @Input() bullets: boolean;
+  @Input() scrollNavigation: boolean;
 
   @Output() previewOpen = new EventEmitter();
   @Output() previewClose = new EventEmitter();
@@ -123,6 +124,16 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   @HostListener('mouseleave') onMouseLeave() {
     if (this.arrowsAutoHide && this.arrows) {
       this.arrows = false;
+    }
+  }
+
+  @HostListener('wheel', ['$event']) onMousewheel(e) {
+    if (this.scrollNavigation) {
+      if (e.deltaY < 0) {
+        this.showNext();
+      } else if (e.deltaY > 0) {
+        this.showPrev();
+      }
     }
   }
 

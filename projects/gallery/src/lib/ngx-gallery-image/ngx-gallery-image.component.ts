@@ -350,7 +350,7 @@ export class NgxGalleryImageComponent implements OnInit, OnChanges {
 
     if (this.animation === NgxGalleryAnimation.Slide
       || this.animation === NgxGalleryAnimation.Fade) {
-      timeout = 500;
+      timeout = 50;
     }
 
     setTimeout(() => {
