@@ -1,6 +1,6 @@
 {
   "name": "@comforth/ngx-gallery",
-  "version": "17.0.1",
+  "version": "17.1.0",
   "description": "A simple responsive native gallery component for Angular 8+ and 13+.",
   "author": "Com-Forth Kft forked from Andrey Kolkov <a.kolkov@gmail.com>",
   "repository": "https://github.com/ComForth/ngx-gallery",

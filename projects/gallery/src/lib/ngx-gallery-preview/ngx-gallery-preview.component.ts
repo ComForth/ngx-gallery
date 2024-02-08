@@ -65,6 +65,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   @Input() zoomMin: number;
   @Input() zoomInIcon: string;
   @Input() zoomOutIcon: string;
+  @Input() scrollZoom: boolean;
   @Input() animation: boolean;
   @Input() actions: NgxGalleryAction[];
   @Input() rotate: boolean;
@@ -127,12 +128,19 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
     }
   }
 
-  @HostListener('wheel', ['$event']) onMousewheel(e) {
+  @HostListener('wheel', ['$event']) onMousewheel(e: any) {
     if (this.scrollNavigation) {
       if (e.deltaY < 0) {
         this.showNext();
       } else if (e.deltaY > 0) {
         this.showPrev();
+      }
+      else if (this.scrollZoom) {
+        if (e.deltaY < 0) {
+          this.zoomIn();
+        } else if (e.deltaY > 0) {
+          this.zoomOut();
+        }
       }
     }
   }

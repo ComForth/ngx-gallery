@@ -61,6 +61,7 @@ export interface INgxGalleryOptions {
     previewScrollNavigation?: boolean;
     previewInfinityMove?: boolean;
     previewZoom?: boolean;
+    previewEnableScrollZoom?: boolean;
     previewZoomStep?: number;
     previewZoomMax?: number;
     previewZoomMin?: number;
@@ -138,6 +139,7 @@ export class NgxGalleryOptions implements INgxGalleryOptions {
     previewInfinityMove?: boolean;
     previewScrollNavigation?: boolean;
     previewZoom?: boolean;
+    previewEnableScrollZoom?: boolean;
     previewZoomStep?: number;
     previewZoomMax?: number;
     previewZoomMin?: number;
@@ -225,6 +227,7 @@ export class NgxGalleryOptions implements INgxGalleryOptions {
         this.previewCloseOnEsc = use(obj.previewCloseOnEsc, false);
         this.previewKeyboardNavigation = use(obj.previewKeyboardNavigation, false);
         this.previewScrollNavigation = use(obj.previewScrollNavigation, false);
+        this.previewEnableScrollZoom = use(obj.previewEnableScrollZoom, false);
         this.previewAnimation = use(obj.previewAnimation, true);
         this.previewAutoPlay = use(obj.previewAutoPlay, false);
         this.previewAutoPlayInterval = use(obj.previewAutoPlayInterval, 2000);
