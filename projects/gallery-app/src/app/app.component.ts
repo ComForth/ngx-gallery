@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgxGalleryOptions} from '@kolkov/ngx-gallery';
-import {NgxGalleryImage} from '@kolkov/ngx-gallery';
-import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'projects/gallery/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +21,9 @@ export class AppComponent implements OnInit{
         arrowPrevIcon: 'fa fa-chevron-left',
         arrowNextIcon: 'fa fa-chevron-right',
         imageAnimation: NgxGalleryAnimation.Slide,
-        imageSwipe: true
+        imageSwipe: true,
+        previewZoom: true,
+        previewEnableScrollZoom: true
       },
       // max-width 800
       {
