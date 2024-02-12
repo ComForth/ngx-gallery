@@ -135,12 +135,11 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
       } else if (e.deltaY > 0) {
         this.showPrev();
       }
-      else if (this.scrollZoom) {
-        if (e.deltaY < 0) {
-          this.zoomIn();
-        } else if (e.deltaY > 0) {
-          this.zoomOut();
-        }
+    } else if (this.scrollZoom) {
+      if (e.deltaY < 0) {
+        this.zoomIn();
+      } else if (e.deltaY > 0) {
+        this.zoomOut();
       }
     }
   }
