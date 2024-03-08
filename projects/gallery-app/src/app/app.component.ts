@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgxGalleryOptions} from '@comforth/ngx-gallery';
-import {NgxGalleryImage} from '@comforth/ngx-gallery';
-import {NgxGalleryAnimation} from '@comforth/ngx-gallery';
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'projects/gallery/src/public-api';
 
 @Component({
   selector: 'app-root',
