@@ -25,6 +25,7 @@ export class AppComponent implements OnInit{
         previewCustomText: true,
         previewDescription: true,
         previewZoom: true,
+        previewCustomTextMaxWidth: '450px'
       },
       // max-width 800
       {
@@ -73,8 +74,7 @@ export class AppComponent implements OnInit{
         big: 'assets/img/gallery/3-big.jpeg',
         customText: [
           ['Text 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum massa malesuada sapien'],
-          ['Text 2: 0000', 'Text 3: 000000'],
-          ['Text 4: 00.1111', 'Text 5: 10'],
+          ['Text 2: 0000', 'Text 3: 000000', 'Text 4: 00.1111', 'Text 5: 10'],
         ]
       },
       {

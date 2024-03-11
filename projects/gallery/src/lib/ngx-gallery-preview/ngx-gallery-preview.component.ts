@@ -44,6 +44,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   @Input() descriptions: string[];
   @Input() showDescription: boolean;
   @Input() customTextArray: string[][][];
+  @Input() customTextMaxWidth: string;
   @Input() showCustomText: boolean;
   @Input() arrows: boolean;
   @Input() arrowsAutoHide: boolean;

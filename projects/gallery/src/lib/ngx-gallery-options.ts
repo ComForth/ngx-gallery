@@ -69,6 +69,7 @@ export interface INgxGalleryOptions {
     previewCustom?: (index: number) => void;
     previewBullets?: boolean;
     previewCustomText?: boolean;
+    previewCustomTextMaxWidth?: string;
     arrowPrevIcon?: string;
     arrowNextIcon?: string;
     closeIcon?: string;
@@ -147,6 +148,7 @@ export class NgxGalleryOptions implements INgxGalleryOptions {
     previewCustom?: (index: number) => void;
     previewBullets?: boolean;
     previewCustomText?: boolean;
+    previewCustomTextMaxWidth?: string;
     arrowPrevIcon?: string;
     arrowNextIcon?: string;
     closeIcon?: string;
@@ -218,7 +220,8 @@ export class NgxGalleryOptions implements INgxGalleryOptions {
 
         this.preview = use(obj.preview, true);
         this.previewDescription = use(obj.previewDescription, true);
-        this.previewCustomText = use(obj.previewCustomText, true)
+        this.previewCustomText = use(obj.previewCustomText, true);
+        this.previewCustomTextMaxWidth = use(obj.previewCustomTextMaxWidth, '200px');
         this.previewArrows = use(obj.previewArrows, true);
         this.previewArrowsAutoHide = use(obj.previewArrowsAutoHide, false);
         this.previewSwipe = use(obj.previewSwipe, false);
