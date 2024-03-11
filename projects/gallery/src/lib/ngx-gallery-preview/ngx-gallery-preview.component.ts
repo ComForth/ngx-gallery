@@ -30,6 +30,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   src: SafeUrl;
   srcIndex: number;
   description: string;
+  customText: string[][];
   type: string;
   showSpinner = false;
   positionLeft = 0;
@@ -42,6 +43,8 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   @Input() images: string[] | SafeResourceUrl[];
   @Input() descriptions: string[];
   @Input() showDescription: boolean;
+  @Input() customTextArray: string[][][];
+  @Input() showCustomText: boolean;
   @Input() arrows: boolean;
   @Input() arrowsAutoHide: boolean;
   @Input() swipe: boolean;
@@ -449,6 +452,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
     this.type = this.getFileType(this.images[this.index] as string);
     this.srcIndex = this.index;
     this.description = this.descriptions[this.index];
+    this.customText = this.customTextArray[this.index];
     this.changeDetectorRef.markForCheck();
 
     setTimeout(() => {

@@ -21,7 +21,10 @@ export class AppComponent implements OnInit{
         arrowPrevIcon: 'fa fa-chevron-left',
         arrowNextIcon: 'fa fa-chevron-right',
         imageAnimation: NgxGalleryAnimation.Slide,
-        imageSwipe: true
+        imageSwipe: true,
+        previewCustomText: true,
+        previewDescription: true,
+        previewZoom: true,
       },
       // max-width 800
       {
@@ -46,17 +49,33 @@ export class AppComponent implements OnInit{
       {
         small: 'assets/img/gallery/1-small.jpeg',
         medium: 'assets/img/gallery/1-medium.jpeg',
-        big: 'assets/img/gallery/1-big.jpeg'
+        big: 'assets/img/gallery/1-big.jpeg',
+        customText: [
+          ['Text 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum massa malesuada sapien'],
+          ['Text 2: 0000', 'Text 3: 000000'],
+          ['Text 4: 00.1111', 'Text 5: 10'],
+        ],
+        description: 'test.jpeg'
       },
       {
         small: 'assets/img/gallery/2-small.jpeg',
         medium: 'assets/img/gallery/2-medium.jpeg',
-        big: 'assets/img/gallery/2-big.jpeg'
+        big: 'assets/img/gallery/2-big.jpeg',
+        customText: [
+          ['Text 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum massa malesuada sapien'],
+          ['Text 2: 0000', 'Text 3: 000000'],
+          ['Text 4: 00.1111', 'Text 5: 10'],
+        ]
       },
       {
         small: 'assets/img/gallery/3-small.jpeg',
         medium: 'assets/img/gallery/3-medium.jpeg',
-        big: 'assets/img/gallery/3-big.jpeg'
+        big: 'assets/img/gallery/3-big.jpeg',
+        customText: [
+          ['Text 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum massa malesuada sapien'],
+          ['Text 2: 0000', 'Text 3: 000000'],
+          ['Text 4: 00.1111', 'Text 5: 10'],
+        ]
       },
       {
         small: 'assets/img/gallery/4-small.jpeg',

@@ -48,6 +48,7 @@ export class NgxGalleryComponent implements OnInit, DoCheck, AfterViewInit {
   descriptions: string[];
   links: string[];
   labels: string[];
+  customTextArray: string[][][];
 
   oldImages: NgxGalleryImage[];
   oldImagesLength = 0;
@@ -288,6 +289,7 @@ export class NgxGalleryComponent implements OnInit, DoCheck, AfterViewInit {
     this.descriptions = this.images.map((img) => img.description as string);
     this.links = this.images.map((img) => img.url as string);
     this.labels = this.images.map((img) => img.label as string);
+    this.customTextArray = this.images.map((img) => img.customText);
   }
 
   private setBreakpoint(): void {

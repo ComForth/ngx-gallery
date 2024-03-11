@@ -8,6 +8,7 @@ export interface INgxGalleryImage {
     url?: string;
     type?: string;
     label?: string;
+    customText?: string[][];
 }
 
 export class NgxGalleryImage implements INgxGalleryImage {
@@ -18,6 +19,7 @@ export class NgxGalleryImage implements INgxGalleryImage {
     url?: string;
     type?: string;
     label?: string;
+    customText?: string[][];
 
     constructor(obj: INgxGalleryImage) {
         this.small = obj.small;
@@ -27,5 +29,6 @@ export class NgxGalleryImage implements INgxGalleryImage {
         this.url = obj.url;
         this.type = obj.type;
         this.label = obj.label;
+        this.customText = obj.customText;
     }
 }

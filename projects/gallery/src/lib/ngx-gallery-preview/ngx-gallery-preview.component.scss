@@ -119,3 +119,28 @@ ngx-gallery-bullets {
   flex: 1 1 auto;
   position: relative;
 }
+
+.ngx-gallery-preview-custom-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  text-align: justify;
+  color: white;
+  font-size: 16px;
+  flex: 0 1 auto;
+  z-index: 10;
+}
+
+.ngx-gallery-preview-custom-text-grid {
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.ngx-gallery-preview-custom-text-row {
+  display: flex;
+  flex-direction: row;
+  max-width: 500px;
+  justify-content: space-between;
+}
