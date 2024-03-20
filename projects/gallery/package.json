@@ -1,18 +1,18 @@
 {
   "name": "@comforth/ngx-gallery",
-  "version": "2.0.1",
+  "version": "14.0.0",
   "description": "A simple responsive native gallery component for Angular 8+ and 13+.",
   "author": "Com-Forth Kft forked from Andrey Kolkov <a.kolkov@gmail.com>",
   "repository": "https://github.com/ComForth/ngx-gallery",
   "license": "MIT",
   "private": false,
   "peerDependencies": {
-    "@angular/common": ">=13.0.0 <14",
-    "@angular/core": ">=13.0.0 <14",
-    "@angular/animations": ">=13.0.0 <14"
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@angular/animations": "^14.0.0"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.1"
   },
   "keywords": [
     "angular",
