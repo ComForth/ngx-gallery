@@ -220,8 +220,8 @@ export class NgxGalleryOptions implements INgxGalleryOptions {
 
         this.preview = use(obj.preview, true);
         this.previewDescription = use(obj.previewDescription, true);
-        this.previewCustomText = use(obj.previewCustomText, true);
-        this.previewCustomTextMaxWidth = use(obj.previewCustomTextMaxWidth, '200px');
+        this.previewCustomText = use(obj.previewCustomText, false);
+        this.previewCustomTextMaxWidth = use(obj.previewCustomTextMaxWidth, '650px');
         this.previewArrows = use(obj.previewArrows, true);
         this.previewArrowsAutoHide = use(obj.previewArrowsAutoHide, false);
         this.previewSwipe = use(obj.previewSwipe, false);
