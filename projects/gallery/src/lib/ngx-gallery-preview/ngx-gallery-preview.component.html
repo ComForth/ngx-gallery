@@ -40,8 +40,6 @@
     <ngx-gallery-bullets *ngIf="bullets" [count]="images.length" [active]="index"
                          (bulletChange)="showAtIndex($event)"></ngx-gallery-bullets>
   </div>
-  <div class="ngx-gallery-preview-text" *ngIf="showDescription && description" [innerHTML]="description"
-       (click)="$event.stopPropagation()"></div>
   <div class="ngx-gallery-preview-custom-text-wrapper" *ngIf="showCustomText && customText" (click)="$event.stopPropagation()">
     <div class="ngx-gallery-preview-custom-text-grid">
       <div class="ngx-gallery-preview-custom-text-row" *ngFor="let row of customText" [style.max-width]="customTextMaxWidth">
@@ -51,4 +49,6 @@
       </div>
     </div>
   </div>
+  <div class="ngx-gallery-preview-text" *ngIf="showDescription && description" [innerHTML]="description"
+       (click)="$event.stopPropagation()"></div>
 </div>

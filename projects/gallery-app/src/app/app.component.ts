@@ -27,7 +27,8 @@ export class AppComponent implements OnInit{
         previewZoom: true,
         previewCustomTextMaxWidth: '450px',
         imageCustomText: true,
-        imageCustomTextMaxWidth: '450px'
+        imageCustomTextMaxWidth: '450px',
+        imageDescription: true
       },
       // max-width 800
       {

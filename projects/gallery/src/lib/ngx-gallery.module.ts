@@ -9,7 +9,6 @@ import {NgxGalleryBulletsComponent} from './ngx-gallery-bullets/ngx-gallery-bull
 import {CommonModule} from '@angular/common';
 import {HAMMER_GESTURE_CONFIG, HammerGestureConfig} from '@angular/platform-browser';
 import { NgxGalleryImageCustomTextComponent } from './ngx-gallery-image-custom-text/ngx-gallery-image-custom-text.component';
-//import { NgxGalleryCustomTextComponent } from './ngx-gallery-custom-text/ngx-gallery-custom-text.component';
 
 @Injectable()
 export class CustomHammerConfig extends HammerGestureConfig  {
@@ -30,7 +29,6 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     NgxGalleryActionComponent,
     NgxGalleryBulletsComponent,
     NgxGalleryImageCustomTextComponent,
-    //NgxGalleryCustomTextComponent,
   ],
   imports: [ CommonModule ],
   exports: [NgxGalleryComponent],

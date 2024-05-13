@@ -2,10 +2,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
     text-align: justify;
-    color: white;
+    color: black;
     font-size: 16px;
     flex: 0 1 auto;
     z-index: 10;
@@ -13,7 +11,7 @@
   
   .ngx-gallery-image-custom-text-grid {
     margin: auto;
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
   
   .ngx-gallery-image-custom-text-row {
