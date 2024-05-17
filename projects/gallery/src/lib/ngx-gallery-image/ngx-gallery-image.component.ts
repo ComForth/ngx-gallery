@@ -11,7 +11,7 @@ import {
   Output,
   SimpleChanges
 } from '@angular/core';
-import {DomSanitizer, SafeResourceUrl, SafeStyle} from '@angular/platform-browser';
+import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {NgxGalleryService} from '../ngx-gallery.service';
 import {NgxGalleryOrderedImage} from '../ngx-gallery-ordered-image';
 import {NgxGalleryAction} from '../ngx-gallery-action';
@@ -35,18 +35,18 @@ type Orientation = ('slideLeft' | 'slideRight' | 'fade' | 'rotateLeft' | 'rotate
       state('rotateRight', style({})),
       state('zoom', style({})),
       transition('slideRight => void', [
-        animate('500ms ease-in-out', style({transform: 'translateX(-100%)'}))
+        animate('250ms ease-in-out', style({transform: 'translateX(-100%)'}))
       ]),
       transition('void => slideRight', [
         style({transform: 'translateX(100%)'}),
-        animate('500ms ease-in-out', style({transform: 'translateX(0)'}))
+        animate('250ms ease-in-out', style({transform: 'translateX(0)'}))
       ]),
       transition('slideLeft => void', [
-        animate('500ms ease-in-out', style({transform: 'translateX(100%)'}))
+        animate('250ms ease-in-out', style({transform: 'translateX(100%)'}))
       ]),
       transition('void => slideLeft', [
         style({transform: 'translateX(-100%)'}),
-        animate('500ms ease-in-out', style({transform: 'translateX(0)'}))
+        animate('250ms ease-in-out', style({transform: 'translateX(0)'}))
       ]),
       transition('fade => void', [
         animate('500ms ease-in-out', style({opacity: '0'}))
@@ -374,8 +374,8 @@ export class NgxGalleryImageComponent implements OnInit, OnChanges {
     }
   }
 
-  getSafeUrl(image: string | SafeResourceUrl): SafeStyle {
-    return this.sanitization.bypassSecurityTrustStyle(this.helperService.getBackgroundUrl(image.toString()));
+  getSafeUrl(image: string): SafeUrl {
+    return this.sanitization.bypassSecurityTrustUrl(image);
   }
 
   getFileType(fileSource: string) {

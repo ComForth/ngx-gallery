@@ -10,7 +10,7 @@ import {
   Output,
   SimpleChanges
 } from '@angular/core';
-import {DomSanitizer, SafeResourceUrl, SafeStyle} from '@angular/platform-browser';
+import {DomSanitizer, SafeResourceUrl, SafeStyle, SafeUrl} from '@angular/platform-browser';
 import {NgxGalleryService} from '../ngx-gallery.service';
 import {NgxGalleryAction} from '../ngx-gallery-action';
 import {NgxGalleryOrder} from '../ngx-gallery-order';
@@ -248,8 +248,8 @@ export class NgxGalleryThumbnailsComponent implements OnChanges {
     }
   }
 
-  getSafeUrl(image: string | SafeResourceUrl): SafeStyle {
-    return this.sanitization.bypassSecurityTrustStyle(this.helperService.getBackgroundUrl(image.toString()));
+  getSafeUrl(image: string): SafeUrl {
+    return this.sanitization.bypassSecurityTrustUrl(image);
   }
 
   getFileType(fileSource: string | SafeResourceUrl): string {

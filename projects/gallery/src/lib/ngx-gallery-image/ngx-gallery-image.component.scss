@@ -15,24 +15,11 @@
 }
 
 .ngx-gallery-image {
-  background-position: center;
-  // background-repeat: no-repeat;
-  // height: 100%;
-  //width: 100%;
-  //position: absolute;
-  //top: 0;
+  height: inherit;
 
   &.ngx-gallery-active {
     // z-index: 1;
   }
-}
-
-.ngx-gallery-image-size-cover .ngx-gallery-image {
-  background-size: cover;
-}
-
-.ngx-gallery-image-size-contain .ngx-gallery-image {
-  background-size: contain;
 }
 
 .ngx-gallery-animation-fade {
@@ -48,21 +35,21 @@
 }
 
 .ngx-gallery-animation-slide {
-  .ngx-gallery-image {
-    /*transition: 0.5s ease-in-out;
+  // .ngx-gallery-image {
+  //     transition: 2s ease-in-out;
 
-    &.ngx-gallery-active {
-      transform:translateX(0);
-    }
+    // &.ngx-gallery-active {
+    //   transform:translateX(0);
+    // }
 
-    &.ngx-gallery-inactive-left {
-      transform:translateX(-100%);
-    }
+    // &.ngx-gallery-inactive-left {
+    //   transform:translateX(-100%);
+    // }
 
-    &.ngx-gallery-inactive-right {
-      transform:translateX(100%);
-    }*/
-  }
+    // &.ngx-gallery-inactive-right {
+    //   transform:translateX(100%);
+    // }
+  //}
 }
 
 .ngx-gallery-animation-rotate {
