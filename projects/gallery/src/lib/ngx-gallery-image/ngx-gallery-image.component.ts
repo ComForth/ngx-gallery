@@ -11,7 +11,7 @@ import {
   Output,
   SimpleChanges
 } from '@angular/core';
-import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
+import {DomSanitizer} from '@angular/platform-browser';
 import {NgxGalleryService} from '../ngx-gallery.service';
 import {NgxGalleryOrderedImage} from '../ngx-gallery-ordered-image';
 import {NgxGalleryAction} from '../ngx-gallery-action';
@@ -372,10 +372,6 @@ export class NgxGalleryImageComponent implements OnInit, OnChanges {
     } else {
       return false;
     }
-  }
-
-  getSafeUrl(image: string): SafeUrl {
-    return this.sanitization.bypassSecurityTrustUrl(image);
   }
 
   getFileType(fileSource: string) {

@@ -1,9 +1,9 @@
 import { SafeResourceUrl } from '@angular/platform-browser';
 
 export interface INgxGalleryImage {
-    small?: string | SafeResourceUrl;
-    medium?: string | SafeResourceUrl;
-    big?: string | SafeResourceUrl;
+    small?: string;
+    medium?: string;
+    big?: string;
     description?: string;
     url?: string;
     type?: string;
@@ -12,9 +12,9 @@ export interface INgxGalleryImage {
 }
 
 export class NgxGalleryImage implements INgxGalleryImage {
-    small?: string | SafeResourceUrl;
-    medium?: string | SafeResourceUrl;
-    big?: string | SafeResourceUrl;
+    small?: string;
+    medium?: string;
+    big?: string;
     description?: string;
     url?: string;
     type?: string;
