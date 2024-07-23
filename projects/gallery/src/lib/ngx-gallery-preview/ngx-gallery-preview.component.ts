@@ -14,7 +14,7 @@ import {
   SimpleChanges,
   ViewChild
 } from '@angular/core';
-import {DomSanitizer, SafeResourceUrl, SafeStyle, SafeUrl} from '@angular/platform-browser';
+import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
 import {NgxGalleryService} from '../ngx-gallery.service';
 import {NgxGalleryAction} from '../ngx-gallery-action';
 
@@ -27,7 +27,7 @@ import {NgxGalleryAction} from '../ngx-gallery-action';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges {
-  src: SafeUrl;
+  src: string;
   srcIndex: number;
   description: string;
   customText: string[][];
@@ -40,7 +40,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   rotateValue = 0;
   index = 0;
 
-  @Input() images: string[] | SafeResourceUrl[];
+  @Input() images: string[];
   @Input() descriptions: string[];
   @Input() showDescription: boolean;
   @Input() customTextArray: string[][][];
@@ -287,10 +287,6 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
     }
   }
 
-  getSafeUrl(image: string): SafeUrl {
-    return this.sanitization.bypassSecurityTrustUrl(image);
-  }
-
   getFileType(fileSource: string): string {
     return this.helperService.getFileType(fileSource);
   }
@@ -449,7 +445,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
     this.rotateValue = 0;
     this.resetPosition();
 
-    this.src = this.getSafeUrl(this.images[this.index] as string);
+    this.src = this.images[this.index] as string;
     this.type = this.getFileType(this.images[this.index] as string);
     this.srcIndex = this.index;
     this.description = this.descriptions[this.index];

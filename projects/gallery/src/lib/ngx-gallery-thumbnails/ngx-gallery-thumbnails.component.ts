@@ -10,7 +10,7 @@ import {
   Output,
   SimpleChanges
 } from '@angular/core';
-import {DomSanitizer, SafeResourceUrl, SafeStyle} from '@angular/platform-browser';
+import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
 import {NgxGalleryService} from '../ngx-gallery.service';
 import {NgxGalleryAction} from '../ngx-gallery-action';
 import {NgxGalleryOrder} from '../ngx-gallery-order';
@@ -29,7 +29,7 @@ export class NgxGalleryThumbnailsComponent implements OnChanges {
 
   minStopIndex = 0;
 
-  @Input() images: string[] | SafeResourceUrl[];
+  @Input() images: string[];
   @Input() isAnimating: boolean;
   @Input() links: string[];
   @Input() labels: string[];
@@ -90,7 +90,7 @@ export class NgxGalleryThumbnailsComponent implements OnChanges {
     this.validateIndex();
   }
 
-  getImages(): string[] | SafeResourceUrl[] {
+  getImages(): string[] {
     if (!this.images) {
       return [];
     }
@@ -248,11 +248,7 @@ export class NgxGalleryThumbnailsComponent implements OnChanges {
     }
   }
 
-  getSafeUrl(image: string | SafeResourceUrl): SafeStyle {
-    return this.sanitization.bypassSecurityTrustStyle(this.helperService.getBackgroundUrl(image.toString()));
-  }
-
-  getFileType(fileSource: string | SafeResourceUrl): string {
+  getFileType(fileSource: string): string {
     return this.helperService.getFileType(fileSource.toString());
   }
 

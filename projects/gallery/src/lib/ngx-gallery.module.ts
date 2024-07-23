@@ -6,7 +6,9 @@ import {NgxGalleryThumbnailsComponent} from './ngx-gallery-thumbnails/ngx-galler
 import {NgxGalleryPreviewComponent} from './ngx-gallery-preview/ngx-gallery-preview.component';
 import {NgxGalleryActionComponent} from './ngx-gallery-action/ngx-gallery-action.component';
 import {NgxGalleryBulletsComponent} from './ngx-gallery-bullets/ngx-gallery-bullets.component';
+import { SecureCallPipe } from './secure-call.pipe';
 import {CommonModule} from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import {HAMMER_GESTURE_CONFIG, HammerGestureConfig} from '@angular/platform-browser';
 import { NgxGalleryImageCustomTextComponent } from './ngx-gallery-image-custom-text/ngx-gallery-image-custom-text.component';
 
@@ -28,9 +30,10 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     NgxGalleryPreviewComponent,
     NgxGalleryActionComponent,
     NgxGalleryBulletsComponent,
+    SecureCallPipe,
     NgxGalleryImageCustomTextComponent,
   ],
-  imports: [ CommonModule ],
+  imports: [ CommonModule, HttpClientModule ],
   exports: [NgxGalleryComponent],
   providers: [
     { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
