@@ -10,6 +10,7 @@ import { SecureCallPipe } from './secure-call.pipe';
 import {CommonModule} from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import {HAMMER_GESTURE_CONFIG, HammerGestureConfig} from '@angular/platform-browser';
+import { NgxGalleryImageCustomTextComponent } from './ngx-gallery-image-custom-text/ngx-gallery-image-custom-text.component';
 
 @Injectable()
 export class CustomHammerConfig extends HammerGestureConfig  {
@@ -30,6 +31,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
     NgxGalleryActionComponent,
     NgxGalleryBulletsComponent,
     SecureCallPipe,
+    NgxGalleryImageCustomTextComponent,
   ],
   imports: [ CommonModule, HttpClientModule ],
   exports: [NgxGalleryComponent],

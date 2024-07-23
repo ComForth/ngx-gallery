@@ -1,0 +1,21 @@
+.ngx-gallery-image-custom-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: justify;
+    color: black;
+    font-size: 16px;
+    flex: 0 1 auto;
+    z-index: 10;
+  }
+  
+  .ngx-gallery-image-custom-text-grid {
+    margin: auto;
+    margin-top: 10px;
+  }
+  
+  .ngx-gallery-image-custom-text-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }

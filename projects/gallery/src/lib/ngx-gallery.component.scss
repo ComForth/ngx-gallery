@@ -21,6 +21,10 @@
   ngx-gallery-thumbnails {
     order: 1;
   }
+
+  ngx-gallery-image-custom-text {
+    order: 3;
+  }
 }
 
 .ngx-gallery-layout.thumbnails-bottom {
@@ -29,6 +33,10 @@
   }
 
   ngx-gallery-thumbnails {
+    order: 3;
+  }
+
+  ngx-gallery-image-custom-text {
     order: 2;
   }
 }

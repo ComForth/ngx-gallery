@@ -27,6 +27,8 @@ export interface INgxGalleryOptions {
     imageActions?: NgxGalleryAction[];
     imageDescription?: boolean;
     imageBullets?: boolean;
+    imageCustomText?: boolean;
+    imageCustomTextMaxWidth?: string;
     thumbnails?: boolean;
     thumbnailsColumns?: number;
     thumbnailsRows?: number;
@@ -106,6 +108,8 @@ export class NgxGalleryOptions implements INgxGalleryOptions {
     imageActions?: NgxGalleryAction[];
     imageDescription?: boolean;
     imageBullets?: boolean;
+    imageCustomText?: boolean;
+    imageCustomTextMaxWidth?: string;
     thumbnails?: boolean;
     thumbnailsColumns?: number;
     thumbnailsRows?: number;
@@ -195,6 +199,8 @@ export class NgxGalleryOptions implements INgxGalleryOptions {
         this.imageActions = use(obj.imageActions, []);
         this.imageDescription = use(obj.imageDescription, false);
         this.imageBullets = use(obj.imageBullets, false);
+        this.imageCustomText = use(obj.imageCustomText, false);
+        this.imageCustomTextMaxWidth = use(obj.imageCustomTextMaxWidth, '450px');
 
         this.thumbnails = use(obj.thumbnails, true);
         this.thumbnailsColumns = use(obj.thumbnailsColumns, 4);

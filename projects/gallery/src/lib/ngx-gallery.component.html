@@ -11,6 +11,10 @@
                      [actions]="currentOptions?.imageActions" [descriptions]="descriptions"
                      [showDescription]="currentOptions?.imageDescription" [bullets]="currentOptions?.imageBullets"
                      (imageClick)="openPreview($event)" (activeChange)="selectFromImage($event)" (animating)="setAnimating($event)"></ngx-gallery-image>
+  
+  <ngx-gallery-image-custom-text *ngIf="currentOptions?.image" [selectedIndex]="selectedIndex"
+                                [customTextArray]="customTextArray" [showCustomText]="currentOptions?.imageCustomText"
+                                [customTextMaxWidth]="currentOptions?.imageCustomTextMaxWidth"></ngx-gallery-image-custom-text>
 
   <ngx-gallery-thumbnails *ngIf="currentOptions?.thumbnails" [style.marginTop]="getThumbnailsMarginTop()"
                           [style.marginBottom]="getThumbnailsMarginBottom()" [style.height]="getThumbnailsHeight()"

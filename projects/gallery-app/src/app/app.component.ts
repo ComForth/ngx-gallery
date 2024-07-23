@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
     this.galleryOptions = [
       {
         width: '600px',
-        height: '400px',
+        height: '600px',
         thumbnailsColumns: 4,
         arrowPrevIcon: 'fa fa-chevron-left',
         arrowNextIcon: 'fa fa-chevron-right',
@@ -25,7 +25,10 @@ export class AppComponent implements OnInit{
         previewCustomText: true,
         previewDescription: true,
         previewZoom: true,
-        previewCustomTextMaxWidth: '450px'
+        previewCustomTextMaxWidth: '450px',
+        imageCustomText: true,
+        imageCustomTextMaxWidth: '450px',
+        imageDescription: true
       },
       // max-width 800
       {

@@ -1,0 +1,9 @@
+<div class="ngx-gallery-image-custom-text-wrapper" *ngIf="showCustomText && customTextArray[selectedIndex]" (click)="$event.stopPropagation()">
+    <div class="ngx-gallery-image-custom-text-grid">
+      <div class="ngx-gallery-image-custom-text-row" *ngFor="let row of customTextArray[selectedIndex]" [style.max-width]="customTextMaxWidth">
+        <div class="ngx-gallery-image-custom-text" *ngFor="let col of row">
+          {{ col }}
+        </div>
+      </div>
+    </div>
+  </div>
