@@ -175,6 +175,8 @@ add this class to app CSS `.ngx-gallery { display: inline-block; margin-bottom: 
 | imageAutoPlayPauseOnHover  | `boolean` | `false` | no | Enables or disables pause auto play on hover |
 | imageInfinityMove  | `boolean` | `false` | no | Enables or disables infinity move by arrows |
 | imageActions  | `NgxGalleryAction[]` | `[]` | no | Enables or disables navigation bullets |
+| imageCustomText | `boolean` | `false` | no | Enables or disables custom text for images |
+| imageCustomTextMaxWidth | `string` | `450px` | no | Maximum width for custom text |
 
 #### Thumbnails options
 | Input  | Type | Default | Required | Description |
@@ -223,6 +225,8 @@ add this class to app CSS `.ngx-gallery { display: inline-block; margin-bottom: 
 | previewRotate  | `boolean` | `false` | no | Enables or disables rotate buttons |
 | previewDownload  | `boolean` | `false` | no | Enables or disables download button |
 | previewBullets  | `boolean` | `false` | no | Enables or disables navigation bullets |
+| previewCustomText | `boolean` | `false` | no | Enables or disables custom text for images |
+| previewCustomTextMaxWidth | `string` | `650px` | no | Maximum width for custom text |
 
 #### Icons options
 
@@ -244,12 +248,13 @@ add this class to app CSS `.ngx-gallery { display: inline-block; margin-bottom: 
 
 | Input  | Type | Default | Required | Description |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| small  | `string/SafeResourceUrl` | `-` | no | Url used in thumbnails |
-| medium  | `string/SafeResourceUrl` | `-` | no | Url used in image |
-| big  | `string/SafeResourceUrl` | `-` | yes | Url used in preview |
+| small  | `string` | `-` | no | Url used in thumbnails |
+| medium  | `string` | `-` | no | Url used in image |
+| big  | `string` | `-` | yes | Url used in preview |
 | description  | `string` | `-` | no | Description used in preview |
 | url  | `string` | `-` | no | Url used in link |
 | label  | `string` | `-` | no | Label used for aria-label when thumbnail is a link |
+| customText  | `string[][]` | `-` | no | Custom text is displayed beneath images in a grid-like manner, with each sub-array representing a row and each string within a sub-array representing a cell. |
 
 ### NgxGalleryAnimation
 - `Fade` (default)
