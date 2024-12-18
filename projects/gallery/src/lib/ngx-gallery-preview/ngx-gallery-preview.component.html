@@ -5,6 +5,7 @@
   <div class="ngx-gallery-preview-icons">
     <ngx-gallery-action *ngFor="let action of actions" [icon]="action.icon" [disabled]="action.disabled"
                         [titleText]="action.titleText" (closeClick)="action.onClick($event, index)"></ngx-gallery-action>
+    <ngx-gallery-action *ngIf="showOcrCheck" [icon]="ocrCheckIcon" [titleText]="'OCR check'" (closeClick)="onOcrCheckButtonClicked()"></ngx-gallery-action>                    
     <a *ngIf="download && src" [href]="src" class="ngx-gallery-icon" aria-hidden="true" download>
       <i class="ngx-gallery-icon-content {{ downloadIcon }}"></i>
     </a>

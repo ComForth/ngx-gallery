@@ -69,6 +69,8 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   @Input() zoomMin: number;
   @Input() zoomInIcon: string;
   @Input() zoomOutIcon: string;
+  @Input() ocrCheckIcon: string;
+  @Input() showOcrCheck: boolean;
   @Input() animation: boolean;
   @Input() actions: NgxGalleryAction[];
   @Input() rotate: boolean;
@@ -82,6 +84,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   @Output() previewOpen = new EventEmitter();
   @Output() previewClose = new EventEmitter();
   @Output() activeChange = new EventEmitter<number>();
+  @Output() openOcrCheck = new EventEmitter<number>();
 
   @ViewChild('previewImage') previewImage: any;
 
@@ -485,6 +488,10 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
     }
 
     return !(typeof img.naturalWidth !== 'undefined' && img.naturalWidth === 0);
+  }
+
+  onOcrCheckButtonClicked() {
+    this.openOcrCheck.emit(this.index);
   }
 
 }

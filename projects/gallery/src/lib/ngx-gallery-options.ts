@@ -82,6 +82,8 @@ export interface INgxGalleryOptions {
     rotateLeftIcon?: string;
     rotateRightIcon?: string;
     downloadIcon?: string;
+    ocrCheckIcon?: string;
+    showOcrCheck?: boolean; 
     actions?: NgxGalleryAction[];
 }
 
@@ -163,6 +165,8 @@ export class NgxGalleryOptions implements INgxGalleryOptions {
     rotateLeftIcon?: string;
     rotateRightIcon?: string;
     downloadIcon?: string;
+    ocrCheckIcon?: string;
+    showOcrCheck?: boolean;
     actions?: NgxGalleryAction[];
 
     constructor(obj: INgxGalleryOptions) {
@@ -250,6 +254,7 @@ export class NgxGalleryOptions implements INgxGalleryOptions {
         this.previewDownload = use(obj.previewDownload, false);
         this.previewCustom = use(obj.previewCustom, undefined);
         this.previewBullets = use(obj.previewBullets, false);
+        this.showOcrCheck = use(obj.showOcrCheck, false);
 
         this.arrowPrevIcon = use(obj.arrowPrevIcon, 'fa fa-arrow-circle-left');
         this.arrowNextIcon = use(obj.arrowNextIcon, 'fa fa-arrow-circle-right');
@@ -261,6 +266,7 @@ export class NgxGalleryOptions implements INgxGalleryOptions {
         this.rotateLeftIcon = use(obj.rotateLeftIcon, 'fa fa-undo');
         this.rotateRightIcon = use(obj.rotateRightIcon, 'fa fa-repeat');
         this.downloadIcon = use(obj.downloadIcon, 'fa fa-arrow-circle-down');
+        this.ocrCheckIcon = use(obj.ocrCheckIcon, 'fa fa-file-text')
 
         if (obj && obj.actions && obj.actions.length) {
             obj.actions = obj.actions.map(action => new NgxGalleryAction(action));

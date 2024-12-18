@@ -51,12 +51,14 @@
                        [infinityMove]="currentOptions?.previewInfinityMove" [zoom]="currentOptions?.previewZoom"
                        [zoomStep]="currentOptions?.previewZoomStep" [zoomMax]="currentOptions?.previewZoomMax"
                        [zoomMin]="currentOptions?.previewZoomMin" [zoomInIcon]="currentOptions?.zoomInIcon"
-                       [zoomOutIcon]="currentOptions?.zoomOutIcon" [actions]="currentOptions?.actions"
+                       [zoomOutIcon]="currentOptions?.zoomOutIcon" [ocrCheckIcon]="currentOptions?.ocrCheckIcon"
+                       [showOcrCheck]="currentOptions?.showOcrCheck" [actions]="currentOptions?.actions"
                        [rotate]="currentOptions?.previewRotate" [rotateLeftIcon]="currentOptions?.rotateLeftIcon"
                        [rotateRightIcon]="currentOptions?.rotateRightIcon" [download]="currentOptions?.previewDownload"
                        [downloadIcon]="currentOptions?.downloadIcon" [bullets]="currentOptions?.previewBullets"
                        [scrollNavigation]="currentOptions?.previewScrollNavigation"
                        (previewClose)="onPreviewClose()" (previewOpen)="onPreviewOpen()"
                        (activeChange)="previewSelect($event)"
+                       (openOcrCheck)="onOcrCheckRequested($event)"
                        [class.ngx-gallery-active]="previewEnabled"></ngx-gallery-preview>
 </div>

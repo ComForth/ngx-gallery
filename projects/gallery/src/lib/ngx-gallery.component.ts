@@ -41,6 +41,7 @@ export class NgxGalleryComponent implements OnInit, DoCheck, AfterViewInit {
   @Output() previewOpen = new EventEmitter();
   @Output() previewClose = new EventEmitter();
   @Output() previewChange = new EventEmitter<{ index: number; image: NgxGalleryImage; }>();
+  @Output() openOcrCheck = new EventEmitter<number>(); 
 
   smallImages: string[];
   mediumImages: NgxGalleryOrderedImage[];
@@ -334,5 +335,9 @@ export class NgxGalleryComponent implements OnInit, DoCheck, AfterViewInit {
 
   setAnimating(event: boolean) {
     this.isAnimating = event;
+  }
+
+  onOcrCheckRequested(event: number) {
+    this.openOcrCheck.emit(event);
   }
 }
