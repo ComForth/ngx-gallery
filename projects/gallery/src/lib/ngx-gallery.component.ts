@@ -24,12 +24,13 @@ import {NgxGalleryOrderedImage} from './ngx-gallery-ordered-image';
 import {NgxGalleryLayout} from './ngx-gallery-layout';
 
 @Component({
-  selector: 'ngx-gallery',
-  templateUrl: './ngx-gallery.component.html',
-  styleUrls: ['./ngx-gallery.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  providers: [NgxGalleryService],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'ngx-gallery',
+    templateUrl: './ngx-gallery.component.html',
+    styleUrls: ['./ngx-gallery.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    providers: [NgxGalleryService],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class NgxGalleryComponent implements OnInit, DoCheck, AfterViewInit {
   @Input() options: NgxGalleryOptions[] = [{}];
