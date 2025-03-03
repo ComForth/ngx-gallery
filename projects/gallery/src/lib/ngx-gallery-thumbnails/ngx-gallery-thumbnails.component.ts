@@ -16,10 +16,11 @@ import {NgxGalleryAction} from '../ngx-gallery-action';
 import {NgxGalleryOrder} from '../ngx-gallery-order';
 
 @Component({
-  selector: 'ngx-gallery-thumbnails',
-  templateUrl: './ngx-gallery-thumbnails.component.html',
-  styleUrls: ['./ngx-gallery-thumbnails.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'ngx-gallery-thumbnails',
+    templateUrl: './ngx-gallery-thumbnails.component.html',
+    styleUrls: ['./ngx-gallery-thumbnails.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class NgxGalleryThumbnailsComponent implements OnChanges {
   thumbnailsLeft: string;
