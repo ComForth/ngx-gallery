@@ -4,7 +4,8 @@ import { Observable } from 'rxjs';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Pipe({
-  name: 'secureCall'
+  name: 'secureCall',
+  standalone: false
 })
 export class SecureCallPipe implements PipeTransform {
 
