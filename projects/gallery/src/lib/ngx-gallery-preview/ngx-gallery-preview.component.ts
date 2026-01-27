@@ -17,6 +17,7 @@ import {
 import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
 import {NgxGalleryService} from '../ngx-gallery.service';
 import {NgxGalleryAction} from '../ngx-gallery-action';
+import { FileDownloadService } from '../file-download.service';
 
 
 @Component({
@@ -99,7 +100,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
 
   constructor(private sanitization: DomSanitizer, private elementRef: ElementRef,
               private helperService: NgxGalleryService, private renderer: Renderer2,
-              private changeDetectorRef: ChangeDetectorRef) {
+              private changeDetectorRef: ChangeDetectorRef, private fileDownloadService: FileDownloadService) {
   }
 
   ngOnInit() {
@@ -493,6 +494,10 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
     }
 
     return !(typeof img.naturalWidth !== 'undefined' && img.naturalWidth === 0);
+  }
+
+  downloadImage(url: string) {
+    this.fileDownloadService.downloadFromUrl(url, 'image.jpg');
   }
 
 }

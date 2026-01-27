@@ -22,13 +22,14 @@ import {NgxGalleryOptions} from './ngx-gallery-options';
 import {NgxGalleryImage} from './ngx-gallery-image';
 import {NgxGalleryOrderedImage} from './ngx-gallery-ordered-image';
 import {NgxGalleryLayout} from './ngx-gallery-layout';
+import { FileDownloadService } from './file-download.service';
 
 @Component({
     selector: 'ngx-gallery',
     templateUrl: './ngx-gallery.component.html',
     styleUrls: ['./ngx-gallery.component.scss'],
     encapsulation: ViewEncapsulation.None,
-    providers: [NgxGalleryService],
+    providers: [NgxGalleryService, FileDownloadService],
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: false
 })
