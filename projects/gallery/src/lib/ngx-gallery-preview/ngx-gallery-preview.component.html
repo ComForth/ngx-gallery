@@ -5,7 +5,7 @@
   <div class="ngx-gallery-preview-icons">
     <ngx-gallery-action *ngFor="let action of actions" [icon]="action.icon" [disabled]="action.disabled"
                         [titleText]="action.titleText" (closeClick)="action.onClick($event, index)"></ngx-gallery-action>
-    <a *ngIf="download && src" [href]="src" class="ngx-gallery-icon" aria-hidden="true" download>
+    <a *ngIf="download && src" (click)="downloadImage(src); $event.preventDefault()" class="ngx-gallery-icon" aria-hidden="true" download>
       <i class="ngx-gallery-icon-content {{ downloadIcon }}"></i>
     </a>
     <ngx-gallery-action *ngIf="zoom" [icon]="zoomOutIcon" [disabled]="!canZoomOut()"
