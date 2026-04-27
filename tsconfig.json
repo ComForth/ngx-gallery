@@ -19,10 +19,6 @@
     "typeRoots": [
       "node_modules/@types"
     ],
-    "lib": [
-      "es2020",
-      "dom"
-    ],
     "paths": {
       "@comforth/ngx-gallery": [
         "dist/gallery"
