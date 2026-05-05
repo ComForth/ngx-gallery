@@ -20,11 +20,12 @@ import {NgxGalleryAction} from '../ngx-gallery-action';
 
 
 @Component({
-  selector: 'ngx-gallery-preview',
-  templateUrl: './ngx-gallery-preview.component.html',
-  styleUrls: ['./ngx-gallery-preview.component.scss'],
-  // encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'ngx-gallery-preview',
+    templateUrl: './ngx-gallery-preview.component.html',
+    styleUrls: ['./ngx-gallery-preview.component.scss'],
+    // encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges {
   src: SafeUrl;

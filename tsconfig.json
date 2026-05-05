@@ -4,24 +4,20 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
     "module": "es2020",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
-    ],
-    "lib": [
-      "es2020",
-      "dom"
     ],
     "paths": {
       "@comforth/ngx-gallery": [

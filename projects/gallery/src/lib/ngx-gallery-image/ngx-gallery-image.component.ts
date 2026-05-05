@@ -21,63 +21,64 @@ import {animate, AnimationEvent, state, style, transition, trigger} from '@angul
 type Orientation = ('slideLeft' | 'slideRight' | 'fade' | 'rotateLeft' | 'rotateRight' | 'zoom' | 'none');
 
 @Component({
-  selector: 'ngx-gallery-image',
-  templateUrl: './ngx-gallery-image.component.html',
-  styleUrls: ['./ngx-gallery-image.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    trigger('animation', [
-      // ...
-      state('slideRight', style({})),
-      state('slideLeft', style({})),
-      state('fade', style({})),
-      state('rotateLeft', style({})),
-      state('rotateRight', style({})),
-      state('zoom', style({})),
-      transition('slideRight => void', [
-        animate('500ms ease-in-out', style({transform: 'translateX(-100%)'}))
-      ]),
-      transition('void => slideRight', [
-        style({transform: 'translateX(100%)'}),
-        animate('500ms ease-in-out', style({transform: 'translateX(0)'}))
-      ]),
-      transition('slideLeft => void', [
-        animate('500ms ease-in-out', style({transform: 'translateX(100%)'}))
-      ]),
-      transition('void => slideLeft', [
-        style({transform: 'translateX(-100%)'}),
-        animate('500ms ease-in-out', style({transform: 'translateX(0)'}))
-      ]),
-      transition('fade => void', [
-        animate('500ms ease-in-out', style({opacity: '0'}))
-      ]),
-      transition('void => fade', [
-        style({opacity: '0'}),
-        animate('500ms ease-in-out', style({opacity: '1'}))
-      ]),
-      transition('rotateLeft => void', [
-        animate('500ms ease-in-out', style({transform: 'scale(1, 1) rotate(-90deg)', opacity: '0'}))
-      ]),
-      transition('void => rotateLeft', [
-        style({transform: 'scale(1, 1) rotate(-90deg)', opacity: '0'}),
-        animate('500ms ease-in-out', style({transform: 'scale(1, 1) rotate(0deg)', opacity: '1'}))
-      ]),
-      transition('rotateRight => void', [
-        animate('500ms ease-in-out', style({transform: 'scale(1, 1) rotate(90deg)', opacity: '0'}))
-      ]),
-      transition('void => rotateRight', [
-        style({transform: 'scale(1, 1) rotate(90deg)', opacity: '0'}),
-        animate('500ms ease-in-out', style({transform: 'scale(1, 1) rotate(0deg)', opacity: '1'}))
-      ]),
-      transition('zoom => void', [
-        animate('500ms ease-in-out', style({transform: 'scale(2.5,2.5)', opacity: '0'}))
-      ]),
-      transition('void => zoom', [
-        style({transform: 'scale(2.5,2.5)', opacity: '0'}),
-        animate('500ms ease-in-out', style({transform: 'scale(1, 1)', opacity: '1'}))
-      ]),
-    ]),
-  ]
+    selector: 'ngx-gallery-image',
+    templateUrl: './ngx-gallery-image.component.html',
+    styleUrls: ['./ngx-gallery-image.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    animations: [
+        trigger('animation', [
+            // ...
+            state('slideRight', style({})),
+            state('slideLeft', style({})),
+            state('fade', style({})),
+            state('rotateLeft', style({})),
+            state('rotateRight', style({})),
+            state('zoom', style({})),
+            transition('slideRight => void', [
+                animate('500ms ease-in-out', style({ transform: 'translateX(-100%)' }))
+            ]),
+            transition('void => slideRight', [
+                style({ transform: 'translateX(100%)' }),
+                animate('500ms ease-in-out', style({ transform: 'translateX(0)' }))
+            ]),
+            transition('slideLeft => void', [
+                animate('500ms ease-in-out', style({ transform: 'translateX(100%)' }))
+            ]),
+            transition('void => slideLeft', [
+                style({ transform: 'translateX(-100%)' }),
+                animate('500ms ease-in-out', style({ transform: 'translateX(0)' }))
+            ]),
+            transition('fade => void', [
+                animate('500ms ease-in-out', style({ opacity: '0' }))
+            ]),
+            transition('void => fade', [
+                style({ opacity: '0' }),
+                animate('500ms ease-in-out', style({ opacity: '1' }))
+            ]),
+            transition('rotateLeft => void', [
+                animate('500ms ease-in-out', style({ transform: 'scale(1, 1) rotate(-90deg)', opacity: '0' }))
+            ]),
+            transition('void => rotateLeft', [
+                style({ transform: 'scale(1, 1) rotate(-90deg)', opacity: '0' }),
+                animate('500ms ease-in-out', style({ transform: 'scale(1, 1) rotate(0deg)', opacity: '1' }))
+            ]),
+            transition('rotateRight => void', [
+                animate('500ms ease-in-out', style({ transform: 'scale(1, 1) rotate(90deg)', opacity: '0' }))
+            ]),
+            transition('void => rotateRight', [
+                style({ transform: 'scale(1, 1) rotate(90deg)', opacity: '0' }),
+                animate('500ms ease-in-out', style({ transform: 'scale(1, 1) rotate(0deg)', opacity: '1' }))
+            ]),
+            transition('zoom => void', [
+                animate('500ms ease-in-out', style({ transform: 'scale(2.5,2.5)', opacity: '0' }))
+            ]),
+            transition('void => zoom', [
+                style({ transform: 'scale(2.5,2.5)', opacity: '0' }),
+                animate('500ms ease-in-out', style({ transform: 'scale(1, 1)', opacity: '1' }))
+            ]),
+        ]),
+    ],
+    standalone: false
 })
 export class NgxGalleryImageComponent implements OnInit, OnChanges {
   @Input() images: NgxGalleryOrderedImage[];
